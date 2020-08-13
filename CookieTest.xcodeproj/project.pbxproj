@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05612BB024D1A8BF0069F80E /* WKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05612BAF24D1A8BF0069F80E /* WKWebView.swift */; };
 		0584B95224CAA6B300D9E7A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584B95124CAA6B300D9E7A7 /* AppDelegate.swift */; };
 		0584B95424CAA6B300D9E7A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584B95324CAA6B300D9E7A7 /* SceneDelegate.swift */; };
 		0584B95624CAA6B300D9E7A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584B95524CAA6B300D9E7A7 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05612BAF24D1A8BF0069F80E /* WKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebView.swift; sourceTree = "<group>"; };
 		0584B94E24CAA6B300D9E7A7 /* CookieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0584B95124CAA6B300D9E7A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0584B95324CAA6B300D9E7A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				0584B95A24CAA6B500D9E7A7 /* Assets.xcassets */,
 				0584B95C24CAA6B500D9E7A7 /* LaunchScreen.storyboard */,
 				0584B95F24CAA6B500D9E7A7 /* Info.plist */,
+				05612BAF24D1A8BF0069F80E /* WKWebView.swift */,
 			);
 			path = CookieTest;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0584B95624CAA6B300D9E7A7 /* ViewController.swift in Sources */,
+				05612BB024D1A8BF0069F80E /* WKWebView.swift in Sources */,
 				0584B95224CAA6B300D9E7A7 /* AppDelegate.swift in Sources */,
 				0584B95424CAA6B300D9E7A7 /* SceneDelegate.swift in Sources */,
 			);

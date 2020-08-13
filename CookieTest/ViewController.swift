@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let url = URL(string: "https://awein.000webhostapp.com/cookiestest.php")!
+        let url = URL(string: "http://niitqa.innovationm.com/")!
         self.customRequest = URLRequest(url: url)
         
         addWebView()
@@ -25,27 +25,26 @@ class ViewController: UIViewController {
         let preferences = WKPreferences()
         preferences.javaScriptEnabled = true
         preferences.javaScriptCanOpenWindowsAutomatically = true
-        
+  
         let cookie = HTTPCookie(properties: [
-            .domain: "awein.000webhostapp.com",
+            .domain: "niitqa.innovationm.com",
             .path: "/",
-            .name: "test",
-            .value: "value",
-            .secure: "TRUE",
-            .expires: NSDate(timeIntervalSinceNow: 3600)
+            .name: "flarum_session",
+            .value: "gdo1qi5JAis08FxAdQTij6KNNKhh5m8a7LYgfjbj",
+            .secure: "FALSE",
+            .expires: NSDate(timeIntervalSinceNow: 31556926)
         ])
         
         //Makes sure the cookie is set before instantiating the webview and initiating the request
         if let myCookie = cookie {
+            HTTPCookieStorage.shared.cookieAcceptPolicy = .always
             WKWebViewConfiguration.includeCookie(cookie: myCookie, preferences: preferences, completion: {
                 [weak self] config in
                 if let `self` = self {
                     if let configuration = config {
-                        self.webView = WKWebView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width , height: self.view.frame.height), configuration: configuration)
-                        
+                        self.webView = WKCookieWebView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width , height: self.view.frame.height), configuration: configuration, useRedirectCookieHandling: true)
                         self.view.addSubview(self.webView)
                         self.webView.load(self.customRequest)
-                        self.webView.allowsBackForwardNavigationGestures = true
                     }
                 }
             })
